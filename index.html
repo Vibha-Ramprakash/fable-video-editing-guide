@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fable 5.2 × video editing: the full guide</title>
+<meta name="description" content="The 4 prompts from the reel, ready to paste into Claude: the Editor that checks its own work, the Motion Designer, the Art Director and the Growth Team.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter+Tight:wght@500;700;800&family=Montserrat:wght@900&family=Playfair+Display:ital,wght@1,500&display=swap">
+<style>
+  :root { --paper:#fffaf1; --ink:#2b1d14; --mut:#7a685c; --pink:#ff2e7e; --green:#4be38b; --butter:#fbe38e; --card:#ffffff; --line:#eadfcd; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font:500 17px/1.5 'Inter Tight',system-ui,sans-serif; -webkit-text-size-adjust:100%; }
+  main { max-width:640px; margin:0 auto; padding:32px 18px 56px; }
+  .eyebrow { font:800 12px 'Inter Tight'; letter-spacing:.14em; color:var(--mut); text-transform:uppercase; }
+  h1 { font:900 34px/1.08 Montserrat,sans-serif; letter-spacing:-.5px; margin:10px 0 10px; }
+  h1 span { display:inline-block; background:var(--green); color:#06291a; font:400 30px/1 Anton; letter-spacing:.5px; padding:6px 12px 8px; border-radius:8px; vertical-align:4px; }
+  .lede { color:var(--mut); margin:0 0 18px; }
+  .honest { background:var(--butter); border-radius:14px; padding:12px 16px; font-weight:700; margin:0 0 26px; }
+  h2 { font:800 23px/1.2 'Inter Tight'; margin:34px 0 10px; display:flex; gap:12px; align-items:center; }
+  h2 b { flex:none; width:40px; height:40px; border-radius:50%; background:var(--pink); color:#fff; font:400 24px/40px Anton; text-align:center; }
+  h2.plain { display:block; }
+  p { margin:0 0 12px; }
+  ol, ul { margin:0 0 12px; padding-left:22px; }
+  li { margin:0 0 6px; }
+  .tags { margin:0 0 10px; }
+  .t { display:inline-block; background:var(--butter); border-radius:8px; padding:3px 10px; font:800 13px 'Inter Tight'; margin:0 6px 6px 0; }
+  .box { position:relative; background:var(--card); border-radius:16px; box-shadow:0 8px 22px rgba(90,60,30,.12); margin:0 0 12px; }
+  .box pre { white-space:pre-wrap; word-wrap:break-word; margin:0; padding:16px 16px 18px; font:500 15px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace; }
+  .box button { display:block; width:100%; border:0; border-top:1px solid var(--line); background:#fff; color:var(--ink); font:800 15px 'Inter Tight'; padding:13px; border-radius:0 0 16px 16px; cursor:pointer; }
+  .box button.ok { background:var(--green); color:#06291a; }
+  .back { color:var(--mut); font-size:15.5px; }
+  .back b { color:var(--ink); }
+  .cta { background:var(--ink); color:#fff; border-radius:18px; padding:20px 18px; margin-top:38px; }
+  .cta h3 { font:800 22px/1.2 'Inter Tight'; margin:0 0 6px; }
+  .cta p { color:#e9dfd2; }
+  .cta a { display:inline-block; background:var(--pink); color:#fff; text-decoration:none; font:800 16px 'Inter Tight'; padding:12px 18px; border-radius:12px; }
+  a { color:#c2185b; }
+  footer { color:var(--mut); font-size:14px; margin-top:28px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">From the reel by @vibha.in.progress</div>
+  <h1>Fable 5.2 × video editing <span>full guide</span></h1>
+  <p class="lede">The 4 prompts from the reel, ready to paste into Claude. Each one says what to attach and what you get back.</p>
+  <p class="honest">One rule for all four: it drafts, you approve. Nothing renders or goes live until you say yes.</p>
+
+  <h2 class="plain">Before you start</h2>
+  <ol>
+    <li>Open the <b>Claude desktop app</b>.</li>
+    <li>Pick <b>Fable 5.2</b> in the model menu. If you don't see it, use the newest model you have. The prompts still work.</li>
+    <li>Make one folder with your raw clip in it, and point Claude at that folder.</li>
+  </ol>
+  <p>First time editing video with Claude? Do my free setup first, it takes about 10 minutes: <a href="https://vibha-ramprakash.github.io/claude-video-editor-setup/">the Claude video editor setup</a>.</p>
+
+  <h2 class="plain">Your rules file (do this once)</h2>
+  <p>Claude edits much better when it knows your taste. Save this as <b>rules.md</b> in the same folder and change the lines to suit you.</p>
+  <div class="box"><pre id="rules"># My edit rules
+
+- Vertical video, 1080 x 1920. Keep my voice exactly as recorded.
+- Captions: 1 to 3 words at a time, never over my face.
+- One new visual every 2 seconds. No empty parts of the frame.
+- Use real screenshots and real logos. Never invent numbers.
+- Soft sound effects only. No music unless I ask.
+- Show me a storyboard first. Do not render the final until I approve.</pre><button data-copy="rules">Copy the rules file</button></div>
+
+  <h2><b>1</b>The Editor that checks its own work</h2>
+  <div class="tags"><span class="t">attach: your raw clip</span><span class="t">attach: rules.md</span></div>
+  <div class="box"><pre id="p1">Here's my raw clip and my rules.md. Build a playable storyboard: cut the pauses, add captions, effects and sound, one new visual every 2 seconds.
+
+Before you show me anything, render a contact sheet of every beat, look at it yourself, and fix anything cut off, cluttered or covering my face.
+
+List what you fixed. Don't render the final until I approve.</pre><button data-copy="p1">Copy prompt 1</button></div>
+  <p class="back"><b>What comes back:</b> a storyboard you can play, plus a short list of what it caught and fixed in its own work. Give notes, then ask for the render.</p>
+
+  <h2><b>2</b>The Motion Designer</h2>
+  <div class="tags"><span class="t">attach: your clip</span><span class="t">one HTML file</span><span class="t">sound made in code</span></div>
+  <div class="box"><pre id="p2">Make one self-contained HTML file: an airport departure board that flips, letter by letter, to my launch date. It should look and sound like the real object, with the clatter generated in code.
+
+Show me the board on its own first. When I approve it, place it behind me in my video.</pre><button data-copy="p2">Copy prompt 2</button></div>
+  <p class="back"><b>What comes back:</b> a working graphic you can open in your browser, with its own sound. Swap "airport departure board" for anything real: a ticket, a receipt, a pond that ripples when you tap it.</p>
+
+  <h2><b>3</b>The Art Director</h2>
+  <div class="tags"><span class="t">attach: 3 reels you love</span><span class="t">attach: your raw clip</span></div>
+  <div class="box"><pre id="p3">Here are 3 reels I love and my raw clip. Watch each one frame by frame and write a style file: pacing, colours, fonts, transitions, sound.
+
+What I like: the pace and the type. What I don't: the dark look.
+
+Edit my clip inspired by them, in my colours. Don't copy.</pre><button data-copy="p3">Copy prompt 3</button></div>
+  <p class="back"><b>What comes back:</b> a style file in plain words (how often it cuts, the colours, the fonts) and an edit of your clip built from it. Change the "what I like" lines to your own taste. Credit the creators who inspired you.</p>
+
+  <h2><b>4</b>The Growth Team</h2>
+  <div class="tags"><span class="t">sub-agents</span><span class="t">social</span><span class="t">SEO</span><span class="t">outbound</span><span class="t">landing page</span></div>
+  <div class="box"><pre id="p4">You are the lead for my marketing. Spin up sub-agents: one for my social content, one for SEO, one for outbound, one for my landing page.
+
+Each one audits what I have and drafts the next 3 moves. Show me one plan with a checkpoint before each step.
+
+Nothing goes live until I approve.</pre><button data-copy="p4">Copy prompt 4</button></div>
+  <p class="back"><b>What comes back:</b> one plan, four lanes, and drafts for you to approve. Tell it where your things live (your profile, your site, your email list) so it audits the real ones. I'm making a full deep dive on this one soon.</p>
+
+  <h2 class="plain">If the first pass isn't right</h2>
+  <ul>
+    <li>Screenshot the part you don't like and say what's wrong in plain words.</li>
+    <li>Collect all your notes, then ask for one pass. It saves time and credits.</li>
+    <li>Add anything you keep repeating to rules.md, so you only say it once.</li>
+  </ul>
+
+  <div class="cta">
+    <h3>Want to do this live, with me?</h3>
+    <p>Free masterclass, Saturday 14 November, 5 p.m. CET. Bring a clip and edit your first video in Claude.</p>
+    <a href="https://vibha.is/ai-video-studio?source=fable-guide">Save my seat</a>
+  </div>
+
+  <footer>Made by Vibha · @vibha.in.progress. In the reel, the koi pond page is by MiaAI_lab and the reference reel is by Sanji Chien.</footer>
+</main>
+<script>
+  document.querySelectorAll('button[data-copy]').forEach(function (b) {
+    var label = b.textContent;
+    b.addEventListener('click', function () {
+      var text = document.getElementById(b.dataset.copy).textContent;
+      var done = function () { b.textContent = 'Copied ✓'; b.classList.add('ok'); setTimeout(function () { b.textContent = label; b.classList.remove('ok'); }, 1600); };
+      if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text).then(done, function () { fallback(text); done(); }); } else { fallback(text); done(); }
+    });
+  });
+  function fallback(text) { var t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(t); }
+</script>
+</body>
+</html>
